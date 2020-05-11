@@ -1,0 +1,417 @@
+/* Criação e separação das grid */
+.cabecalho { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.rodape { grid-area: footer; }
+
+body {
+  margin: 0;
+  background-color: gray;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header'
+  'menu main'
+  'footer footer';
+  grid-gap: 10px;
+  grid-template-columns: 25% 75%;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  position: relative;
+}
+
+.grid-container > .menu .main .rodape {
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+/* Estilizações de padrões para a body*/
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Estilização do cabeçalho */
+.grid-container > .cabecalho {
+  background-color: rgb(0, 0, 0);
+  margin-right: 10px
+}
+
+
+.cabecalho{
+  height: 75px;
+  position: relative;
+}
+
+.cabecalho ul {
+  margin: 5px;
+}
+
+.cabecalho .btnconta{
+  cursor: pointer;
+}
+
+.conta {
+  display: none;
+  border: 1px solid red;
+  background-color:  rgba(243, 18, 18, 0.651);
+}
+
+.cabecalho .btnconta:hover .conta{
+  display: grid;
+  position: absolute;
+  right: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.conta span{
+  color: black;
+  font-weight: bold;
+}
+
+.conta span:hover {
+  color: red;
+}
+
+.cabecalho li {
+  float: right;
+  padding: 10px 10px;
+  list-style-type: none;
+  font-size: 20px;
+  margin: 10px;
+  top: 10px;
+  color: rgba(243, 18, 18, 0.651);
+}
+
+.cabecalho li:hover {
+    color: rgb(243, 18, 18);
+}
+
+.cabecalho img {
+  height: 75px;
+  width: 200px;
+  position: absolute;
+  padding: 0px;
+  top: 0;
+  left: 4%;
+}
+
+
+.cabecalho h1 { 
+  color: rgba(243, 18, 18, 0.651);
+  top: 10px;
+  right: 50px;
+  text-align: center;
+  display: flex;
+}
+
+/* Estilização do rodapé */
+.grid-container > .rodape {
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-right: 10px
+}
+
+.rodape h3 {
+  color: rgba(243, 18, 18, 0.651);
+  font-size: 15px;
+}
+
+/* Estilização do menu à esquerda */
+/* Sobre o autor*/
+
+.grid-container > .menu {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  padding: 20px 10px 20px 10px;
+  border-right: 1px solid rgba(243, 18, 18, 0.651);
+  margin: 20px 10px 20px 10px;
+}
+
+.divBusca{
+  background-color:rgb(255, 255, 255);
+  border:solid 1px;
+  border-radius:5px;
+  width:300px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 75px;
+}
+ 
+.txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  outline: none;
+  height:32px;
+  width:260px;
+}
+
+.btnBusca {
+  width: 20px;
+  height: 20px;
+  float: right;
+  display: block;
+}
+
+.divBusca button {
+  border-style: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.divBusca button:active{
+  border: 2px solid rgb(255, 255, 255);
+  border-right: none;
+}
+
+.divBusca button:focus{
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+.divBusca button:focus {
+  outline: thin dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+
+.divboxautor {
+  background-color: rgba(243, 18, 18, 0.651);
+  border: 1px solid red;
+  width: 300px;
+  height: 500px;
+  margin: 20px 20px 10px 0;
+
+}
+
+.imgautor {
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  top: 185px;
+  left: 85px;
+}
+
+.divsobreautor {
+  position: absolute;
+  top: 355px;
+  left: 75px;
+  width: 200px;
+}
+
+.divsobreautor div {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.divsobreautor h2 {
+  color: rgba(243, 18, 18, 0.90);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.divsobreautor h3 {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.divsobreautor ul {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.fa {
+  padding: 0 25px 0 0;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  color: red;
+}
+
+/* Estilização do menu à esquerda */
+/* mais populares */
+
+.mais-populares {
+  position: relative;
+  top: 30px;
+  width: 250px;
+  color: rgb(82, 82, 82);
+}
+
+.mais-populares a {
+  text-decoration: none;
+  color: rgba(243, 18, 18, 0.651);
+  font-weight: bold;
+  font-size: 22.5px;
+  margin-top: 20px;
+}
+
+.mais-populares h2{
+  color: gray;
+}
+
+.mais-populares h3 {
+  margin-bottom: 10px;
+  margin-top:0px;
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.mais-populares hr {
+  width: 70%;
+  height: 2px;
+  border-color: rgba(243, 18, 18, 0.651);
+}
+
+.mais-populares span {
+  color: gray;
+  padding-bottom: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btntodas {
+  background: rgba(248, 52, 52, 0.651);
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+  color: black;
+  left: 30px;
+  position: relative;
+}
+
+/* Estilização da main */
+.grid-container > .main {
+  background-color: rgb(255, 255, 255);
+  padding: 20px 10px 20px 10px;
+  margin: 20px 10px 20px 10px;
+}
+
+.img-grid { grid-area: img; }
+.tag-grid { grid-area: tag; }
+.h1-grid { grid-area: h1; }
+.p-grid { grid-area: p; }
+.curtiu-grid { grid-area: curtiu}
+
+.content-grid{
+  display: grid;
+  grid-template-areas:
+  'img tag'
+  'img h1'
+  'img p'
+  'img curtiu';
+  background-color: rgb(255, 255, 255);
+  grid-gap: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.content-grid h1 {
+  color: rgba(248, 52, 52, 0.85);
+}
+
+.curtiu-grid li{
+  display: inline;
+}
+
+.img-grid {
+  width: 350px;
+  height: 350px;
+}
+
+.tag-grid ul{
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+}
+
+.tag-grid li {
+  display: inline;
+  padding: 0px;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+}
+
+.h1-grid {
+  margin: 0;
+  font-size: 25px;
+}
+
+.curtiu-grid .fa {
+  padding:0 0 0 10px;
+}
+
+.content-grid span {
+  color: black;
+}
+
+.btnleia {
+  background: rgba(248, 52, 52, 0.651);
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 50px 10px 50px;
+  color: black;
+}
+
+.curtiu-grid a{
+  text-decoration: none;
+  color: rgba(243, 18, 18, 0.651);
+  font-weight: bold;
+  font-size: 22.5px;
+  margin-top: 20px;
+}
+
+.main h2 {
+  color: rgba(243, 18, 18, 0.651);
+  font-size: 35px;
+  margin-top: 0;
+}
+
+.main h3 {
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.boxtag {
+  background-color: rgba(248, 52, 52, 0.651);
+  border: 1px solid red;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.tag-grid span {
+  color: gray;
+}
+
+.tag-grid a {
+  text-decoration: none;
+  color: rgba(243, 18, 18, 0.651);
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+}
+
+.p-grid {
+  color: gray;
+}
+
+.content-grid a {
+  text-decoration: none;
+}
